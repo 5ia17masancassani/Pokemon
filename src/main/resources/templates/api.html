@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Reservation List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet"></link>
+</head>
+<body>
+	<div>
+		<form action="#" th:action="@{/pokemon}" th:object="${pokemon}"
+			method="post">
+			<p>
+				Pokemon Name: <input class="input-group mb-3" type="text"
+					th:field="*{name}" />
+			</p>
+
+		</form>
+
+	</div>
+
+</body>
+</html>

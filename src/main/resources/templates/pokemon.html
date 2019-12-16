@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Reservation List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet"></link>
+</head>
+<body>
+	<div>
+
+		<table style="width: 100%">
+			<tr>
+				<td>Name</td>
+				<td th:text="${pokemon.name}"></td>
+
+			</tr>
+			<tr>
+				<td>Pokedex-Number</td>
+				<td th:text="${pokemon.id}"></td>
+
+			</tr>
+			<tr>
+				<td>Height</td>
+				<td th:text="${pokemon.height}"></td>
+
+			</tr>
+			<tr>
+				<td>Weight</td>
+				<td th:text="${pokemon.weight}"></td>
+
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td th:text="${pokemon.description}"></td>
+
+			</tr>
+			<tr>
+				<td>Generation</td>
+				<td th:text="${pokemon.generation}"></td>
+
+			</tr>
+			<tr>
+				<td>HP</td>
+				<td th:text="${pokemon.stats.hp}"></td>
+
+			</tr>
+			<tr>
+				<td>Attack</td>
+				<td th:text="${pokemon.stats.attack}"></td>
+
+			</tr>
+			<tr>
+				<td>Defense</td>
+				<td th:text="${pokemon.stats.defense}"></td>
+
+			</tr>
+			<tr>
+				<td>Special Attack</td>
+				<td th:text="${pokemon.stats.sp_atk}"></td>
+
+			</tr>
+			<tr>
+				<td>Special Defense</td>
+				<td th:text="${pokemon.stats.sp_def}"></td>
+
+			</tr>
+			<tr>
+				<td>Speed</td>
+				<td th:text="${pokemon.stats.speed}"></td>
+
+			</tr>
+			<tr>
+				<td>Total</td>
+				<td th:text="${pokemon.stats.total}"></td>
+
+			</tr>
+			<tr>
+				<td>Image</td>
+				<td><img th:src="${pokemon.sprites.normal}"
+					alt="pokemon image not available"></td>
+
+			</tr>
+			<tr>
+				<td>Gif</td>
+				<td><img th:src="${pokemon.sprites.animated}"
+					alt="pokemon gif not available"></td>
+
+			</tr>
+			<tr>
+			<p>Evolution-Line </p>
+			<ol>
+				<th:block th:each="member : ${pokemon.family.evolutionLine}">
+					<li>
+						<p th:text="${member}"></p>
+						
+					</li>
+				</th:block>
+			</ol>
+			</tr>
+			
+			<tr>
+			<p>Types</p>
+			<ul>
+				<th:block th:each="type : ${pokemon.type}">
+					<li>
+						<p th:text="${type}"></p>
+						
+					</li>
+				</th:block>
+			</ul>
+			</tr>
+		</table>
+
+	</div>
+
+</body>
+</html>
