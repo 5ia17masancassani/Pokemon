@@ -18,11 +18,21 @@ public class MainController {
 		model.addAttribute("pokemon", rest.getPokemon(""));
 		return "api";
 	}
-	
+
 	@PostMapping("/pokemon")
 	public String showPokemon(Model model, @ModelAttribute Pokemon pokemon) {
-		model.addAttribute("pokemon", rest.getPokemon(pokemon.getName()));
-		return "pokemon";
+
+		model.addAttribute("error", "No Pokemon found");
+		Pokemon newPokemon = rest.getPokemon(pokemon.getName());
+		if (newPokemon.getHeight() == null) {
+			model.addAttribute("pokemon", newPokemon);
+
+			return "api";
+		} else {
+			model.addAttribute("pokemon", newPokemon);
+			return "pokemon";
+		}
+
 	}
 
 }

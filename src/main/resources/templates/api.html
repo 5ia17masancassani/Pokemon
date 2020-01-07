@@ -3,20 +3,23 @@
 <head>
 <title>Reservation List</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
-	rel="stylesheet"></link>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="pokemon.css">
 </head>
+
 <body>
-	<div>
+	<div class="center">
 		<form action="#" th:action="@{/pokemon}" th:object="${pokemon}"
 			method="post">
-			<p>
-				Pokemon Name: <input class="input-group mb-3" type="text"
+			<p class="test">
+				Enter Pokemon Name: <input class="input-group mb-3" type="text"
 					th:field="*{name}" />
 			</p>
 
 		</form>
 
+		<p th:text="${error}"></p>
 	</div>
 
 </body>

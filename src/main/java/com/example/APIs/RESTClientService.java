@@ -26,6 +26,7 @@ public class RESTClientService {
 		try {
 			response = client.newCall(request).execute();
 			pokemon = gson.fromJson(response.body().string(), Pokemon.class);
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
