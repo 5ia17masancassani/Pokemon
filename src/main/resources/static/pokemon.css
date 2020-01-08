@@ -4,11 +4,15 @@
 	
 }
 
+#centerLink {
+	margin-left: 47%;
+}
+
 body {
 	background-color: rgba(0, 0, 0, 0);
 }
 
-.test {
+#test {
 	font-size: 36px;
 }
 
@@ -18,4 +22,39 @@ html {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+h1 {
+	margin-left: 45%;
+	font-size: 48px;
+}
+
+h2 {
+	margin-left: 45%;
+	font-size: 38px;
+}
+
+.table{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 1%;
+	width: 90%;
+
+}
+#link {
+	margin-left: 80%;
+}
+
+
+img {
+	max-width: 90px;
+	max-height: 90px;
+}
+
+#examples {
+	font-size: 20px;
+}
+
+#types {
+	height: 38px;
 }

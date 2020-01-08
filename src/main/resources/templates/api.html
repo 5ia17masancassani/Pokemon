@@ -12,7 +12,7 @@
 	<div class="center">
 		<form action="#" th:action="@{/pokemon}" th:object="${pokemon}"
 			method="post">
-			<p class="test">
+			<p id="test">
 				Enter Pokemon Name: <input class="input-group mb-3" type="text"
 					th:field="*{name}" />
 			</p>
@@ -20,6 +20,9 @@
 		</form>
 
 		<p th:text="${error}"></p>
+	</div>
+	<div id="centerLink">
+		<a href="https://www.bestrandoms.com/random-pokemon" id="examples">Examples</a>
 	</div>
 
 </body>
